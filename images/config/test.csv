@@ -1,0 +1,7 @@
+image_name,operation,output_name
+test.jpeg,resize_600_500,test_resize_1.png
+test.jpeg,crop_0_0_100_100,test_crop_1.png
+test.jpeg,rotate_90,test_rotate_1.png
+test.jpeg,paste_10_10,test_paste_1.png
+test.jpeg,blur,test_blur.png
+test.jpeg,contour,test_contour.png

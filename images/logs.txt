@@ -1,0 +1,40 @@
+Error: Failed to create Image object, ['output_name'] does not exist
+Details:
+	Invalid config format on .\images\config\test.csv
+	{'image_name': 'test.jpeg', 'operation': 'test_cont.png', 'output_name': None}
+Ran out of memory processing ImageSpecification(
+	test.jpeg,
+	resize_99999999_99999999,
+	test_resize_1.png)
+Details:
+	
+Attempted processing with invalid type in ImageSpecification(
+	test.jpeg,
+	resize,
+	test_resize_2.png)
+Details:
+	'NoneType' object is not iterable
+Attempted processing with invalid type in ImageSpecification(
+	test.jpeg,
+	crop,
+	test_crop_2.png)
+Details:
+	Cropping with None results in original image
+Tried to access an invalid index value in ImageSpecification(
+	test.jpeg,
+	crop_0_0,
+	test_crop_3.png)
+Details:
+	tuple index out of range
+Tried to access an invalid index value in ImageSpecification(
+	test.jpeg,
+	rotate,
+	test_rotate_3.png)
+Details:
+	list index out of range
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	cont,
+	test_cont.png)
+Details:
+	Invalid type of process, cont is not supported
