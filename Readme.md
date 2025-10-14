@@ -68,7 +68,7 @@ The following is the format inside .yaml file:
 
 ### 2. Running the Code:  
 Ensure all dependencies are installed:  
->  `pip install -t requirements.txt`  
+>  `pip install -r requirements.txt`  
 
 On root directory terminal run:  
 >  `py main.py`  
