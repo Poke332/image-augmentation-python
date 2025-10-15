@@ -1,40 +1,48 @@
-Error: Failed to create Image object, ['output_name'] does not exist
-Details:
-	Invalid config format on .\images\config\test.csv
-	{'image_name': 'test.jpeg', 'operation': 'test_cont.png', 'output_name': None}
-Ran out of memory processing ImageSpecification(
+Cannot find file specified in ImageSpecification(
 	test.jpeg,
-	resize_99999999_99999999,
+	resize_600_500,
 	test_resize_1.png)
 Details:
-	
-Attempted processing with invalid type in ImageSpecification(
+	[Errno 2] No such file or directory: '.\\images\\input\\test.jpeg'
+Cannot find file specified in ImageSpecification(
 	test.jpeg,
-	resize,
-	test_resize_2.png)
+	crop_0_0_100_100,
+	test_crop_1.png)
 Details:
-	'NoneType' object is not iterable
-Attempted processing with invalid type in ImageSpecification(
+	[Errno 2] No such file or directory: '.\\images\\input\\test.jpeg'
+Cannot find file specified in ImageSpecification(
 	test.jpeg,
-	crop,
-	test_crop_2.png)
+	rotate_90,
+	test_rotate_1.png)
 Details:
-	Cropping with None results in original image
-Tried to access an invalid index value in ImageSpecification(
+	[Errno 2] No such file or directory: '.\\images\\input\\test.jpeg'
+Cannot find file specified in ImageSpecification(
 	test.jpeg,
-	crop_0_0,
-	test_crop_3.png)
+	paste_10_10,
+	test_paste_1.png)
 Details:
-	tuple index out of range
-Tried to access an invalid index value in ImageSpecification(
+	[Errno 2] No such file or directory: '.\\images\\input\\test.jpeg'
+Cannot find file specified in ImageSpecification(
 	test.jpeg,
-	rotate,
-	test_rotate_3.png)
+	blur,
+	test_blur.png)
 Details:
-	list index out of range
-Invalid value found in ImageSpecification(
+	[Errno 2] No such file or directory: '.\\images\\input\\test.jpeg'
+Cannot find file specified in ImageSpecification(
 	test.jpeg,
-	cont,
-	test_cont.png)
+	contour,
+	test_contour.png)
 Details:
-	Invalid type of process, cont is not supported
+	[Errno 2] No such file or directory: '.\\images\\input\\test.jpeg'
+Cannot find file specified in ImageSpecification(
+	test.jpeg,
+	resize_600_500,
+	test_600_500.png)
+Details:
+	[Errno 2] No such file or directory: '.\\images\\input\\test.jpeg'
+Cannot find file specified in ImageSpecification(
+	test.jpeg,
+	resize_600_500,
+	test_600_500.png)
+Details:
+	[Errno 2] No such file or directory: '.\\images\\input\\test.jpeg'

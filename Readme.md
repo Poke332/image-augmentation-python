@@ -7,7 +7,7 @@ This projects explores the process of creating new images using existing images 
 > - tqdm
 
 ---
-###### By Team 21  
+###### By Team 13  
 ###### - Richie Cedrick Adrian (01881250010)  
 ###### - Jasmine Regina (01881250055)
 ###### - Ivan Pratama (01881250004)
