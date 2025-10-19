@@ -90,7 +90,9 @@ class FileManager():
         config_list = os.listdir(config_path)
         valid_configs = []
         for config in config_list:
+            # splits name and file extension
             _, file_type = config.split(".")
+            # checks for supoorted file extensions
             if file_type in ["csv", "json", "yaml"]:
                 valid_configs.append(config)
         return valid_configs
@@ -103,11 +105,16 @@ class FileManager():
             image (Image.Image): Image object from PIL Library, contains the generated image
             image_specs (ImageSpecification): ImageSpecification instance with the corresponding output name
             output_folder (str): output folder directory
-        """
         
+        Raises:
+            ValueError: in cases where output name does not exist
+        """
+        # Gets output name then check if it exist
         output_name = image_specs.output_name
         if not output_name:
             raise ValueError("Empty output name")
+        
+        # Saves file if it exist
         output_path = os.path.join(output_folder, output_name)
         image.save(output_path, optimize=True)
         

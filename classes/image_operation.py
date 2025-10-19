@@ -39,9 +39,6 @@ class ImageSpecification():
         Args:
             image_dict (dict): a dictionary which must contain image_name, operation, output_name as its keys
 
-        Raises:
-            ValueError: if any of the keys are missing, raise a value error
-
         Returns:
             Object/Instance: creates an instances of the current ImageSpecification class based on information from the dictionary
         """
@@ -67,6 +64,10 @@ class ImageSpecification():
             input_folder (str): the input folder directory where all source images are stored
             watermark_fname (str, optional): The watermark file name that will be used for pasting over an image. Defaults to None.
             
+        Raises:
+            IndexError: If the degree of rotation is not specified, ex: expected "rotate_[degrees]" but received only "rotate"
+            ValueError: If program asks for a tuple but receives none instead due to incomplete values on operations, or operation read by program is not supported
+            
         Returns:
             Image.Image: the Image object generated using python's PIL module
 
@@ -74,9 +75,12 @@ class ImageSpecification():
         with Image.open(os.path.join(input_folder, self.file_name)) as img:
             # Splits instructs into 2 entries, first entry is the type of processing to the done, and if 2nd entry exist then that is the details needed
             instructions = self.operation.split("_", 1)
+            # Checks for all operations other than rotate
             if len(instructions) == 2 and instructions[0] != "rotate":
                 operation, detail = instructions
+                #Splits the details (point coordinates) into a tuple of absolute value integers
                 converted_details = tuple(map(lambda x: abs(int(x)), detail.split("_"))) or None
+            # If details are not found then set to none
             else:
                 operation, converted_details = instructions[0], None
             
@@ -85,7 +89,9 @@ class ImageSpecification():
                 img = img.resize(converted_details)
             # Rotate processing
             elif operation == "rotate":
+                # Rotation details are handled in its own cluster
                 try:
+                    # Converts degree details into an absolute value float
                     deg = abs(float(instructions[1]))
                     img = img.rotate(deg)
                 except:
@@ -93,7 +99,7 @@ class ImageSpecification():
             # Crop processing
             elif operation == "crop":
                 if converted_details == None:
-                    raise TypeError("Cropping with None results in original image")
+                    raise ValueError("Cropping with None results in original image")
                 img = img.crop(converted_details)
             # Paste processing
             elif operation == "paste":
@@ -108,4 +114,6 @@ class ImageSpecification():
                 img = img.filter(ImageFilter.CONTOUR)
             else:
                 raise ValueError(f"Invalid type of process, {operation} is not supported")
+            
+            # Returns output image
             return img

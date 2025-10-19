@@ -38,24 +38,26 @@ if __name__ == "__main__":
         for image in tqdm(image_list):
             # Tries to process the image, if error is found then list them inside error_log
             try:
+                # Processes images and saves it into output_folder, count the total successful processing
                 input_folder = folders.get("input_folder")
                 output = image.process_image(input_folder, "watermark.png")
                 output_folder = folders.get("output_folder")
                 FileManager.save_image(output, image, output_folder)
                 count+=1
-            except FileNotFoundError as error:
+            # WHen an error occurs, checks for the type of error and appends the error message into error_log list
+            except FileNotFoundError as error: # If input file or watermark file not found
                 error_log.append(f"Cannot find file specified in {image}\nDetails:\n\t{error}")
-            except PermissionError as error:
+            except PermissionError as error: # If folder directory is located in a restricted folder
                 error_log.append(f"Specified file cannot be accessed\nDetails:\n\t{error}")
-            except ValueError as error:
+            except ValueError as error: # If any invalid values are found in the process
                 error_log.append(f"Invalid value found in {image}\nDetails:\n\t{error}")
-            except TypeError as error:
+            except TypeError as error: # If any input were of invalid typing, ex: Expecting coords as a tuple of int but gets string instead
                 error_log.append(f"Attempted processing with invalid type in {image}\nDetails:\n\t{error}")
-            except IndexError as error:
+            except IndexError as error: # The program splits instructions and the degress/coordinate by index, if one does not exist or program tries to access invalid index this error is raised
                 error_log.append(f"Tried to access an invalid index value in {image}\nDetails:\n\t{error}")
-            except MemoryError as error:
+            except MemoryError as error: # In cases where resize are made ubsurdly high which consumes too much memory
                 error_log.append(f"Ran out of memory processing {image}\nDetails:\n\t{error}")
-            except Exception as error:
+            except Exception as error: # Any other undetected errors will go into here
                 error_log.append(f"Unknown error has occurned {image}\nDetails:\n\t{error}")
         print(f"\nTotal Image Processed: {count}/{len(image_list)}")
         
