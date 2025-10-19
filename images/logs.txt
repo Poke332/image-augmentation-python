@@ -1,0 +1,24 @@
+Ran out of memory processing ImageSpecification(
+	test.jpeg,
+	resize_99999999_99999999,
+	test_resize_2.png)
+Details:
+	
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	resize_100_200,
+	)
+Details:
+	Empty output name
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	,
+	test_resize_1.png)
+Details:
+	Invalid type of process,  is not supported
+Cannot find file specified in ImageSpecification(
+	,
+	resize_600_500,
+	test_resize_1.png)
+Details:
+	[Errno 2] No such file or directory: '.\\images\\input\\'
