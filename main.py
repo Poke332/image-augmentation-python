@@ -31,9 +31,9 @@ if __name__ == "__main__":
                 FileManager.read_file(os.path.join(config_folder, file), image_list)
             except ValueError as error:
                 error_log.append(f"{error}")
-        print(f"\nTotal valid instructions: {len(image_list)}\n")
+        print(f"\nTotal found instructions: {len(image_list)}\n")
         
-        print("Processing Images...")
+        print("BE WARNED: ALL OUTPUT WITH SAME NAME WILL OVERRIDE ONE ANOTHER!\nProcessing Images...")
         # Iterates all detected images and processes them
         for image in tqdm(image_list):
             # Tries to process the image, if error is found then list them inside error_log

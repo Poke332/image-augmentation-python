@@ -17,6 +17,7 @@ This projects explores the process of creating new images using existing images 
 #### 1.1 Preparing Images
 All image file supported by Pillow's `Image.open()` method is supported
 Save your images inside `.\images\input` folder
+__MUST HAVE `watermark.png` FILE IN INPUT FOLDER__
 #### 1.2 Preparing Configs
 Supported config file types: `.csv .json .yaml`
 All config files are saved to: `.\images\config`

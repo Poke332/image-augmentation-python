@@ -22,3 +22,141 @@ Cannot find file specified in ImageSpecification(
 	test_resize_1.png)
 Details:
 	[Errno 2] No such file or directory: '.\\images\\input\\'
+Tried to access an invalid index value in ImageSpecification(
+	test.jpeg,
+	crop_0_0,
+	test_crop_2.png)
+Details:
+	tuple index out of range
+Attempted processing with invalid type in ImageSpecification(
+	test.jpeg,
+	crop,
+	test_crop_3.png)
+Details:
+	Cropping with None results in original image
+Tried to access an invalid index value in ImageSpecification(
+	test.jpeg,
+	rotate,
+	test_rotate_2.png)
+Details:
+	No degree of rotation is specified, image processing not ran due to same input and output
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	br,
+	test_blur.png)
+Details:
+	Invalid type of process, br is not supported
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	cnotour,
+	test_contour.png)
+Details:
+	Invalid type of process, cnotour is not supported
+Ran out of memory processing ImageSpecification(
+	test.jpeg,
+	resize_99999999_99999999,
+	test_resize_2.png)
+Details:
+	
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	resize_100_200,
+	)
+Details:
+	Empty output name
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	,
+	test_resize_1.png)
+Details:
+	Invalid type of process,  is not supported
+Cannot find file specified in ImageSpecification(
+	,
+	resize_600_500,
+	test_resize_1.png)
+Details:
+	[Errno 2] No such file or directory: '.\\images\\input\\'
+Tried to access an invalid index value in ImageSpecification(
+	test.jpeg,
+	crop_0_0,
+	test_crop_2.png)
+Details:
+	tuple index out of range
+Attempted processing with invalid type in ImageSpecification(
+	test.jpeg,
+	crop,
+	test_crop_3.png)
+Details:
+	Cropping with None results in original image
+Tried to access an invalid index value in ImageSpecification(
+	test.jpeg,
+	rotate,
+	test_rotate_2.png)
+Details:
+	No degree of rotation is specified, image processing not ran due to same input and output
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	br,
+	test_blur.png)
+Details:
+	Invalid type of process, br is not supported
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	cnotour,
+	test_contour.png)
+Details:
+	Invalid type of process, cnotour is not supported
+Ran out of memory processing ImageSpecification(
+	test.jpeg,
+	resize_99999999_99999999,
+	test_resize_2.png)
+Details:
+	
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	resize_100_200,
+	)
+Details:
+	Empty output name
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	,
+	test_resize_1.png)
+Details:
+	Invalid type of process,  is not supported
+Cannot find file specified in ImageSpecification(
+	,
+	resize_600_500,
+	test_resize_1.png)
+Details:
+	[Errno 2] No such file or directory: '.\\images\\input\\'
+Tried to access an invalid index value in ImageSpecification(
+	test.jpeg,
+	crop_0_0,
+	test_crop_2.png)
+Details:
+	tuple index out of range
+Attempted processing with invalid type in ImageSpecification(
+	test.jpeg,
+	crop,
+	test_crop_3.png)
+Details:
+	Cropping with None results in original image
+Tried to access an invalid index value in ImageSpecification(
+	test.jpeg,
+	rotate,
+	test_rotate_2.png)
+Details:
+	No degree of rotation is specified, image processing not ran due to same input and output
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	br,
+	test_blur.png)
+Details:
+	Invalid type of process, br is not supported
+Invalid value found in ImageSpecification(
+	test.jpeg,
+	cnotour,
+	test_contour.png)
+Details:
+	Invalid type of process, cnotour is not supported
